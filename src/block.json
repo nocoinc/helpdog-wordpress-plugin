@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "helpdog/helpdog-form-embed",
+	"version": "0.1.0",
+	"title": "Helpdog Form Embed",
+	"category": "embed",
+	"icon": "email",
+	"description": "A plugin to embed forms created with Helpdog Form into WordPress.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "helpdog-form-embed",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

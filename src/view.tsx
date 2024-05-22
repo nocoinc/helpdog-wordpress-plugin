@@ -21,5 +21,5 @@
  */
 
 /* eslint-disable no-console */
-console.log( 'Hello World! (from helpdog-helpdog-form-embed block)' );
+console.log( 'Hello World! (from helpdog-form-embed block)' );
 /* eslint-enable no-console */

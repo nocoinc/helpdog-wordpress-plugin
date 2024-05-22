@@ -11,7 +11,10 @@ import { __ } from "@wordpress/i18n";
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
+import { TextControl } from "@wordpress/components";
+
+import type { BlockEditProps } from "@wordpress/blocks";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -21,6 +24,9 @@ import { useBlockProps } from "@wordpress/block-editor";
  */
 import "./editor.scss";
 
+import type { FormEmbedAttributes } from "./types";
+import { useState } from "@wordpress/element";
+
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
@@ -29,10 +35,36 @@ import "./editor.scss";
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit(props: BlockEditProps<FormEmbedAttributes>) {
+	const {
+		attributes: { formUrl },
+		setAttributes,
+	} = props;
+	
+	const [url, setUrl] = useState(formUrl);
+
 	return (
-		<p {...useBlockProps()}>
-			{__("Helpdog Form Embed – hello from the editor3!", "helpdog-form-embed")}
-		</p>
+		<div {...useBlockProps()}>
+			<InspectorControls>
+				<TextControl
+					label="Form URL"
+					value={url}
+					onChange={(newUrl) => {
+						setUrl(newUrl);
+						setAttributes({ formUrl: newUrl });
+					}}
+				/>
+			</InspectorControls>
+			<div>
+				{url ? (
+					<>
+						<p>TODO: {url}</p>
+						<iframe src={url} width="100%" height="500"></iframe>
+					</>
+				) : (
+					"Enter a form URL to preview."
+				)}
+			</div>
+		</div>
 	);
 }

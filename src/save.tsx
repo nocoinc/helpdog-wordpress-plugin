@@ -7,10 +7,10 @@ export default function Save(props: BlockSaveProps<FormEmbedAttributes>) {
 	const {
 		attributes: { formUrl },
 	} = props;
-	const blockProps = useBlockProps.save();
+	// const blockProps = useBlockProps.save();
 
 	return (
-		<div {...blockProps}>
+		<div {...useBlockProps.save()}>
 			<>
 				<p>TODO: {formUrl}</p>
 				{formUrl ? (

@@ -1,70 +1,119 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
 import { __ } from "@wordpress/i18n";
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
-import { TextControl } from "@wordpress/components";
-
+import { useBlockProps, BlockControls } from "@wordpress/block-editor";
+import {
+	TextControl,
+	Button,
+	ToolbarGroup,
+	ToolbarButton,
+} from "@wordpress/components";
+import { useSelect, useDispatch } from "@wordpress/data";
 import type { BlockEditProps } from "@wordpress/blocks";
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import "./editor.scss";
-
 import type { FormEmbedAttributes } from "./types";
 import { useState } from "@wordpress/element";
+import "./editor.scss";
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {Element} Element to render.
- */
 export default function Edit(props: BlockEditProps<FormEmbedAttributes>) {
 	const {
 		attributes: { formUrl },
 		setAttributes,
+		clientId,
 	} = props;
-	
+
 	const [url, setUrl] = useState(formUrl);
+	const [isEditingUrl, setIsEditingUrl] = useState(!url);
+
+	// const { isSelected } = useSelect(
+	//     (select) => ({
+	//         isSelected: select('core/block-editor').isBlockSelected(clientId),
+	//     }),
+	//     [clientId]
+	// );
+	const { selectBlock } = useDispatch("core/block-editor");
+
+	const handleEmbed = () => {
+		setAttributes({ formUrl: url });
+		setIsEditingUrl(false);
+	};
+
+	const toggleUrlEditing = () => {
+		setIsEditingUrl(!isEditingUrl);
+	};
+
+	const handleClick = () => {
+		// if (!isSelected) {
+		selectBlock(clientId);
+		console.log("Block selected", clientId);
+		// }
+	};
 
 	return (
 		<div {...useBlockProps()}>
-			<InspectorControls>
-				<TextControl
-					label="Form URL"
-					value={url}
-					onChange={(newUrl) => {
-						setUrl(newUrl);
-						setAttributes({ formUrl: newUrl });
+			<BlockControls>
+				<ToolbarGroup>
+					<ToolbarButton
+						icon="edit"
+						label={__("Edit URL", "helpdog-form-embed")}
+						onClick={toggleUrlEditing}
+					/>
+				</ToolbarGroup>
+			</BlockControls>
+
+			{isEditingUrl ? (
+				<div
+					style={{
+						border: "1px solid #ddd",
+						padding: "20px",
+						borderRadius: "4px",
 					}}
-				/>
-			</InspectorControls>
-			<div>
-				{url ? (
-					<>
-						<p>TODO: {url}</p>
-						<iframe src={url} width="100%" height="500"></iframe>
-					</>
-				) : (
-					"Enter a form URL to preview."
-				)}
-			</div>
+				>
+					<h2>
+						<span role="img" aria-label="form">
+							📝
+						</span>{" "}
+						Form URL
+					</h2>
+					<p>Paste a link to the content you want to display on your site.</p>
+					<TextControl
+						placeholder={__("Enter URL to embed here...", "helpdog-form-embed")}
+						value={url}
+						onChange={(newUrl) => setUrl(newUrl)}
+					/>
+					<Button
+						variant="primary"
+						onClick={handleEmbed}
+						style={{ marginTop: "10px" }}
+					>
+						{__("Embed", "helpdog-form-embed")}
+					</Button>
+				</div>
+			) : (
+				<div>
+					{formUrl ? (
+						<div style={{ position: "relative" }} onClick={handleClick}>
+							<div
+								style={{
+									position: "absolute",
+									top: 0,
+									left: 0,
+									width: "100%",
+									height: "100%",
+									zIndex: 1,
+									cursor: "pointer",
+								}}
+							></div>
+
+							<iframe
+								src={formUrl}
+								width="100%"
+								height="500"
+								title="Embedded Form"
+							></iframe>
+						</div>
+					) : (
+						__("Enter a form URL to preview.", "helpdog-form-embed")
+					)}
+				</div>
+			)}
 		</div>
 	);
 }

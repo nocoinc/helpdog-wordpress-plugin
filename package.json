@@ -1,23 +1,27 @@
 {
 	"name": "helpdog-form-embed",
-  "version": "0.1.0",
-  "description": "A plugin to embed forms created with MyForm service into WordPress.",
-	"author": "noco, Inc.",
+	"version": "0.1.0",
+	"description": "A plugin to embed forms created with MyForm service into WordPress.",
+	"author": "noco株式会社",
 	"homepage": "https://helpdog.ai/",
 	"main": "build/index.js",
-  "scripts": {
+	"scripts": {
 		"build": "wp-scripts build --webpack-copy-php",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start --webpack-copy-php"
-  },
-  "devDependencies": {
-    "@prettier/plugin-php": "^0.22.2",
-    "@wordpress/scripts": "^27.9.0",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.5"
-  }
+		"start": "WP_ENV_PORT=18888 wp-env start && wp-scripts start",
+		"stop": "wp-env stop"
+	},
+	"devDependencies": {
+		"@prettier/plugin-php": "^0.22.2",
+		"@types/wordpress__block-editor": "^11.5.14",
+		"@types/wordpress__blocks": "^12.5.14",
+		"@wordpress/env": "^9.10.0",
+		"@wordpress/scripts": "^27.9.0",
+		"prettier": "^3.2.5",
+		"typescript": "^5.4.5"
+	}
 }

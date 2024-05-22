@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name:       Helpdog Form Embed
- * Plugin URI:        https://helpdog.ai/
+ * Plugin URI:        https://helpdog.ai/TODO
  * Description:       A plugin to embed forms created with Helpdog Form into WordPress.
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            noco, Inc.
+ * Author:            noco株式会社
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       helpdog-form-embed
  *

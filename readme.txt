@@ -1,5 +1,5 @@
 === Helpdog Form Embed ===
-Contributors:      noco, Inc.
+Contributors:      noco株式会社
 Tags:              block
 Tested up to:      6.1
 Stable tag:        0.1.0

@@ -1,3 +1,3 @@
 export interface FormEmbedAttributes {
-	formUrl: string;
+  formEmbedUrl: string;
 }

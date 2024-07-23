@@ -1,22 +1,22 @@
-// import { createElement } from '@wordpress/element';
 import { BlockSaveProps } from "@wordpress/blocks";
 import type { FormEmbedAttributes } from "./types";
-import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
+import { useBlockProps } from "@wordpress/block-editor";
 
-export default function Save(props: BlockSaveProps<FormEmbedAttributes>) {
-	const {
-		attributes: { formUrl },
-	} = props;
-	// const blockProps = useBlockProps.save();
+export default function FormSave(props: BlockSaveProps<FormEmbedAttributes>) {
+  const {
+    attributes: { formEmbedUrl },
+  } = props;
 
-	return (
-		<div {...useBlockProps.save()}>
-			<>
-				<p>TODO: {formUrl}</p>
-				{formUrl ? (
-					<iframe src={formUrl} width="100%" height="500"></iframe>
-				) : null}
-			</>
-		</div>
-	);
+  const formEmbedId = formEmbedUrl.split("/embed/f/")[1];
+
+  return (
+    <div {...useBlockProps.save()}>
+      {formEmbedId ? (
+        <>
+          <script src="https://sdk.helpdog.ai/v1/script.js"></script>
+          <div className="hd-form-embed" data-hd-form={formEmbedId}></div>
+        </>
+      ) : null}
+    </div>
+  );
 }

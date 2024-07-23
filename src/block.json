@@ -1,25 +1,24 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 3,
-	"name": "helpdog/form-embed",
-	"version": "0.1.0",
-	"title": "Helpdog Form Embed",
-	"category": "embed",
-	"icon": "email",
-	"description": "A plugin to embed forms created with Helpdog Form into WordPress.",
-	"example": {},
-	"supports": {
-		"html": false
-	},
-	"attributes": {
-		"formUrl": {
-			"type": "string",
-			"default": ""
-		}
-	},
-	"textdomain": "helpdog-form-embed",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js"
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "helpdog/form",
+  "version": "0.1.0",
+  "title": "Helpdog Form",
+  "category": "embed",
+  "icon": "embed-generic",
+  "description": "A plugin to embed forms created with Helpdog Form into WordPress.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "formEmbedUrl": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "helpdog",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
 }

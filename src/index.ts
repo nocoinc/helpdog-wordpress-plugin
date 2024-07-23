@@ -28,20 +28,14 @@ import type { FormEmbedAttributes } from "./types";
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType<FormEmbedAttributes>(metadata.name, {
-	title: metadata.title,
-	category: metadata.category,
-	attributes: {
-		formUrl: {
-			type: "string",
-			default: "",
-		},
-	},
-	/**
-	 * @see ./edit.tsx
-	 */
-	edit: Edit,
-	/**
-	 * @see ./save.tsx
-	 */
-	save: Save,
+  title: metadata.title,
+  category: metadata.category,
+  attributes: {
+    formEmbedUrl: {
+      type: "string",
+      default: "",
+    },
+  },
+  edit: Edit,
+  save: Save,
 });

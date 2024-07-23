@@ -1,4 +1,4 @@
-=== Helpdog Form Embed ===
+=== Helpdog ===
 Contributors:      noco株式会社
 Tags:              block
 Tested up to:      6.1

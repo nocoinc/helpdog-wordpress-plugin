@@ -20,14 +20,13 @@ import "./style.scss";
 import metadata from "./block.json";
 import Edit from "./edit";
 import Save from "./save";
-import type { FormEmbedAttributes } from "./types";
 
 /**
  * Every block starts by registering a new block type definition.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType<FormEmbedAttributes>(metadata.name, {
+registerBlockType(metadata.name, {
   title: metadata.title,
   category: metadata.category,
   attributes: {

@@ -1,8 +1,6 @@
-import { BlockSaveProps } from "@wordpress/blocks";
-import type { FormEmbedAttributes } from "./types";
 import { useBlockProps } from "@wordpress/block-editor";
 
-export default function FormSave(props: BlockSaveProps<FormEmbedAttributes>) {
+export default function FormSave(props) {
   const {
     attributes: { formEmbedUrl },
   } = props;

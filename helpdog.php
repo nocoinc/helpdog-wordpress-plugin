@@ -11,6 +11,7 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       helpdog
+ * Domain Path:       /languages
  *
  * @package Helpdog
  */
@@ -28,23 +29,24 @@ if (!defined("ABSPATH")) {
  */
 function helpdog_block_init()
 {
-  // $script_handle = "helpdog-script";
-  // $text_domain = "helpdog";
+  wp_register_script(
+    "helpdog-script",
+    plugins_url("build/index.js", __FILE__),
+    ["wp-blocks", "wp-element", "react", "wp-i18n", "wp-block-editor"]
+  );
 
-  // wp_register_script($script_handle, plugins_url("build/index.js", __FILE__), [
-  // 	"wp-blocks",
-  // 	// "wp-element",
-  // 	"react",
-  // 	"wp-i18n",
-  // 	"wp-block-editor",
-  // ]);
-
-  register_block_type(__DIR__ . "/build");
-
-  // register_block_type(__DIR__ . "/build", [
-  // 	"editor_script_handles" => [$script_handle],
-  // ]);
-
-  // wp_set_script_translations($script_handle, $text_domain);
+  register_block_type(__DIR__ . "/build", [
+    "editor_script_handles" => ["helpdog-script"],
+  ]);
 }
 add_action("init", "helpdog_block_init");
+
+function helpdog_set_script_translations()
+{
+  wp_set_script_translations(
+    "helpdog-script",
+    "helpdog",
+    plugin_dir_path(__FILE__) . "languages"
+  );
+}
+add_action("init", "helpdog_set_script_translations");

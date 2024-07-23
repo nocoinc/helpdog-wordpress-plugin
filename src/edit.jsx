@@ -7,13 +7,11 @@ import {
   ToolbarButton,
 } from "@wordpress/components";
 import { useSelect, useDispatch } from "@wordpress/data";
-import type { BlockEditProps } from "@wordpress/blocks";
-import type { FormEmbedAttributes } from "./types";
 import { useState } from "@wordpress/element";
 
 import "./editor.scss";
 
-export default function FormEdit(props: BlockEditProps<FormEmbedAttributes>) {
+export default function FormEdit(props) {
   const {
     attributes: { formEmbedUrl },
     setAttributes,
@@ -22,15 +20,8 @@ export default function FormEdit(props: BlockEditProps<FormEmbedAttributes>) {
 
   const [url, setUrl] = useState(formEmbedUrl);
   const [isInvalidUrl, setIsInvalidUrl] = useState(false);
-
   const [isEditingUrl, setIsEditingUrl] = useState(!url);
 
-  // const { isSelected } = useSelect(
-  //     (select) => ({
-  //         isSelected: select('core/block-editor').isBlockSelected(clientId),
-  //     }),
-  //     [clientId]
-  // );
   const { selectBlock } = useDispatch("core/block-editor");
 
   const handleEmbed = () => {
@@ -50,9 +41,7 @@ export default function FormEdit(props: BlockEditProps<FormEmbedAttributes>) {
   };
 
   const handleClick = () => {
-    // if (!isSelected) {
     selectBlock(clientId);
-    // }
   };
 
   return (

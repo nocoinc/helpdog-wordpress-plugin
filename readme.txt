@@ -1,54 +1,47 @@
 === Helpdog ===
 Contributors:      noco株式会社
 Tags:              block
-Tested up to:      6.1
+Requires at least: 6.2
+Requires PHP:      8.0
+Tested up to:      6.6
 Stable tag:        0.1.0
+License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
 A plugin to embed forms created with Helpdog Form into WordPress.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+With Helpdog Form, you can easily create beautiful forms and securely manage customer data.
+This plugin makes it easy to embed Helpdog Form into your WordPress posts.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
 
 == Installation ==
 
 This section describes how to install the plugin and get it working.
 
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/helpdog-form-embed` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/helpdog` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
-
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Is Helpdog free to use? =
 
-An answer to that question.
+Yes, Helpdog is free to use. Please see the URL for more information.
 
-= What about foo bar? =
-
-Answer to foo bar dilemma.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Copy form embed URL from [Helpdog](https://helpdog.ai/).
+2. Enter form embed URL to plugin block.
+
 
 == Changelog ==
 
 = 0.1.0 =
 * Release
 
-== Arbitrary section ==
 
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+== Upgrade Notice ==
+
+For improved security, please use the latest version of the plugin.

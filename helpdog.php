@@ -3,7 +3,7 @@
  * Plugin Name:       Helpdog
  * Plugin URI:        https://helpdog.ai/
  * Description:       A plugin to embed forms created with Helpdog Form into WordPress.
- * Requires at least: 6.0
+ * Requires at least: 6.2
  * Requires PHP:      8.0
  * Version:           0.1.0
  * Author:            noco, Inc.

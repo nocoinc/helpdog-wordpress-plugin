@@ -8,12 +8,10 @@
  * Version:           0.1.0
  * Author:            noco, Inc.
  * Author URI:        https://nocoinc.co.jp/
- * License:           GPL-2.0-or-later
+ * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       helpdog
  * Domain Path:       /languages
- *
- * @package Helpdog
  */
 
 if (!defined("ABSPATH")) {

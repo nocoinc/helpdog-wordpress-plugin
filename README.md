@@ -1,4 +1,4 @@
-# hd-form-embed-wordpress-plugin
+# hd-wordpress-plugin
 
 ## 環境構築
 
@@ -22,5 +22,4 @@
 
 ## i18n
 
-1. `npm run i18n:make-pot`
-2. `cd languages && npm run i18n:make-json`
+TBD

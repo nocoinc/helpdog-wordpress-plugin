@@ -1,6 +1,15 @@
 {
-	"core": "WordPress/WordPress",
-	"plugins": [
-		"."
-	]
+  "core": "https://ja.wordpress.org/wordpress-6.6.1-ja.zip",
+  "phpVersion": "8.1",
+  "port": 18888,
+  "plugins": [
+    "."
+  ],
+  "config": {
+    "WP_DEBUG": true,
+    "WP_DEBUG_LOG": true,
+    "SCRIPT_DEBUG": true,
+    "WP_DEBUG_DISPLAY": false,
+    "WP_PHP_BINARY": "php"
+  }
 }

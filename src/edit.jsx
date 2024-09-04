@@ -64,8 +64,8 @@ export default function FormEdit(props) {
             borderRadius: "4px",
           }}
         >
-          <b>Embed Helpdog form</b>
-          <p>Paste a form embed URL you want to display on your site.</p>
+          <b>{__("Embed Helpdog form", "helpdog")}</b>
+          <p>{__("Paste a form embed URL you want to display on your site.", "helpdog")}</p>
           <TextControl
             placeholder="https://helpdog.ai/embed/f/..."
             value={url}

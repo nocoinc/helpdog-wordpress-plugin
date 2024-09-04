@@ -1,15 +1,15 @@
 # Copyright (C) 2024 noco, Inc.
-# This file is distributed under the GPL-2.0-or-later.
+# This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Helpdog 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/hd-wordpress-plugin\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/helpdog-wordpress-plugin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-07-23T16:11:32+00:00\n"
+"POT-Creation-Date: 2024-09-04T16:35:47+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: helpdog\n"
@@ -39,25 +39,37 @@ msgstr ""
 msgid "https://nocoinc.co.jp/"
 msgstr ""
 
-#: build/index.js:73
+#: build/index.js:71
 #: src/edit.jsx:53
 #: build/index.js:53
 msgid "Replace form"
 msgstr ""
 
-#: build/index.js:95
+#: build/index.js:79
+#: src/edit.jsx:67
+#: build/index.js:67
+msgid "Embed Helpdog form"
+msgstr ""
+
+#: build/index.js:79
+#: src/edit.jsx:68
+#: build/index.js:68
+msgid "Paste a form embed URL you want to display on your site."
+msgstr ""
+
+#: build/index.js:87
 #: src/edit.jsx:76
 #: build/index.js:76
 msgid "Invalid URL. Please enter a valid form embed URL."
 msgstr ""
 
-#: build/index.js:102
+#: build/index.js:93
 #: src/edit.jsx:87
 #: build/index.js:87
 msgid "Embed"
 msgstr ""
 
-#: build/index.js:125
+#: build/index.js:112
 #: src/edit.jsx:109
 #: build/index.js:109
 msgid "Enter a form embed URL to preview."

@@ -1,54 +1,49 @@
 # hd-wordpress-plugin
 
-## 環境構築
+## Environment Setup
 
-1. php@8.1, node@20 のインストール
-2. wp-cli のインストール (https://wp-cli.org/)
-3. `npm i` の実行
+1. Install php@8.1, node@20
+2. Install wp-cli (https://wp-cli.org/)
+3. Run `npm i`
 
-## ローカル開発
+## Local Development
 
-1. 以下のコマンドで、WordPress Docker コンテナを起動。
+1. Start the WordPress Docker container with the following command:
 
    ```console
    npm run start
-   ```
 
-2. http://localhost:18888/wp-admin/plugins.php にアクセス。
+2. Access http://localhost:18888/wp-admin/plugins.php.
 
-   WP ログイン情報は、 `admin/password`。
+The WP login credentials are admin/password.
 
-   ログインすると、開発中のプラグインがインストールされた状態になる。
+Once logged in, the plugin under development will be installed.
+
+## Testing with Multiple Versions
+
+You need to consider both the WordPress version and the PHP version.
+
+WordPress release versions
+The PHP version depends on the WordPress version.
+
+Additionally, the version of npm packages like React used in the plugin also depends on the WordPress version.
+
+Therefore, consider the following sequence:
+
+1. Decide the minimum WordPress version you want to support (usually, it supports 2-3 minor versions back from the latest).
+  - Example: 6.5
+1. Check the latest WordPress version.
+  - Example: 6.6.1
+1. Update npm packages using the "minimum WordPress version".
+  - Run npm run packages-update
+  - Adjust the scripts.packages-update in package.json for more details.
+1. Test the plugin with both the "minimum WordPress version" and the "latest WordPress version".
+  - Modify .wp-env's core, and run npm run start:update.
+1. Update the version references in readme.txt and helpdog.php.
+  - Requires at least, Tested up to, Requires PHP
+1. Update the plugin version itself.
+  - Modify the Stable tag in readme.txt and helpdog.php.
+  - Update the version reference in package.json.
+1. After merging the PR, add a tag.
 
 
-## 複数バージョンのテスト
-
-WordPressのバージョンとPHPのバージョンの両方を考慮する必要がある。
-
-- [WordPressのリリースバージョン](https://github.com/WordPress/wordpress-develop/tags)
-
-PHPバージョンはWordPressのバージョンに依存している。
-
-また、プラグインで利用できるReactなどのnpmパッケージのバージョンもWordPressのバージョンに依存している。
-
-そのため、以下の順番で考える：
-
-1. 対応したいWordPressバージョンの下限を決定する（一般的には最新から2,3マイナーバージョンほど対応する）
-   - 例: `6.5`
-1. 最新のWordPressバージョンを確認する
-   - 例: `6.6.1`
-1. 「WordPressバージョン下限」をつかってnpmパッケージを更新する
-   - `npm run packages-update` と実行する
-   - 詳細は `package.json` の `scripts.packages-update` を調整する
-1. 「WordPressバージョン下限」と「「WordPressバージョン上限」について動作検証する
-   - `.wp-env` の `core` を変更し、`npm run start:update` を実行する
-1. `readme.txt`, `helpdog.php` のバージョン表記を修正する
-   - `Requires at least`, `Tested up to`, `Requires PHP`
-1. プラグイン自体のバージョンを更新する
-   - `readme.txt` と `helpdog.php` の `Stable tag` を修正する
-   - `package.json` の `version` バージョン表記を修正する
-1. PRマージしたあと、tag を付与する
-
-## i18n
-
-TBD

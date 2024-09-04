@@ -45,3 +45,18 @@ Yes, Helpdog is free to use. Please see the URL for more information.
 == Upgrade Notice ==
 
 For improved security, please use the latest version of the plugin.
+
+
+
+== Dependence on external services ==
+
+This plugin depends on a third-party service called "Helpdog" developed by noco, Inc.
+
+See the following link:
+- [Helpdog homepage](https://helpdog.ai/)
+- [terms of service](https://nocoinc.co.jp/tos/helpdog/)
+- [privacy policy](https://nocoinc.co.jp/privacypolicy/)
+
+== Source Code ==
+
+https://github.com/nocoinc/helpdog-wordpress-plugin

@@ -4,7 +4,7 @@ Tags:              block
 Requires at least: 6.5
 Tested up to:      6.6.1
 Requires PHP:      8.1
-Stable tag:        0.1.0
+Stable tag:        0.1.1
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,13 +34,16 @@ Yes, Helpdog is free to use. Please see the URL for more information.
 
 1. Copy form embed URL from [Helpdog](https://helpdog.ai/).
 2. Enter form embed URL to plugin block.
+3. The embedded form will be displayed.
 
 
 == Changelog ==
 
 = 0.1.0 =
-* Release
+* Initial release.
 
+= 0.1.1 =
+* Add assets.
 
 == Upgrade Notice ==
 

@@ -83,7 +83,7 @@ jobs:
     # After the deploy, we also want to create a zip and upload it to the release on Github. We don't want
     # users to have to go to the repository to find our plugin :).
     - name: Upload release asset
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191 # https://github.com/softprops/action-gh-release/releases/tag/v2.0.8
       env:
         # Note, this is an exception to action secrets: GH_TOKEN is always available and provides access to
         # the current repository this action runs in.

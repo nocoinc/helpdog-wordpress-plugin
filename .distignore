@@ -1,0 +1,17 @@
+/.wordpress-org
+/.git
+/.github
+/node_modules
+
+.distignore
+.gitignore
+
+*.zip
+/package.json
+/README.md
+/.vscode
+/.editorconfig
+/package-lock.json
+/.prettierrc.json
+/src
+/.wp-env.json

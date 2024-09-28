@@ -1,10 +1,10 @@
-=== Helpdog ===
+=== Helpdog Form - beautiful, secure and easy form ===
 Contributors:      nocoinc
 Tags:              block
 Requires at least: 6.5
 Tested up to:      6.6.1
 Requires PHP:      8.1
-Stable tag:        0.1.0
+Stable tag:        0.1.1
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,9 +12,15 @@ A plugin to embed forms created with Helpdog Form into WordPress.
 
 == Description ==
 
-With Helpdog Form, you can easily create beautiful forms and securely manage customer data.
-This plugin makes it easy to embed Helpdog Form into your WordPress posts.
+HelpDog Form is a free tool that makes it easy to create highly functional forms.
+You can design and publish a form in minutes for a variety of uses, including contact forms, seminar registration, store visit reservations, customer surveys, and more.
+It also offers a full range of features, including customizable templates, real-time data collection, and an entry form optimization (EFO) function that prevents abandonment during form entry.
 
+= What this plugin solves =
+
+Traditionally, setting up a form on a website required programming knowledge of HTML, CSS, JavaScript, etc., creating a technical hurdle.
+In addition, customizing the design and functionality of forms freely required even more specialized knowledge, which was a major challenge for non-technical users.
+This plugin allows users without programming knowledge to easily embed high-quality forms into their WordPress sites.
 
 == Installation ==
 
@@ -34,13 +40,16 @@ Yes, Helpdog is free to use. Please see the URL for more information.
 
 1. Copy form embed URL from [Helpdog](https://helpdog.ai/).
 2. Enter form embed URL to plugin block.
+3. The embedded form will be displayed.
 
 
 == Changelog ==
 
 = 0.1.0 =
-* Release
+* Initial release.
 
+= 0.1.1 =
+* Add assets.
 
 == Upgrade Notice ==
 

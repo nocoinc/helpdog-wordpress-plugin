@@ -15,8 +15,6 @@ on:
     # run only when a new release is published, but not when it's classified as a pre-release.
     types: [released]
 
-  push:
-
 # A list of jobs involved in this workflow.
 jobs:
 
@@ -80,12 +78,7 @@ jobs:
         SVN_USERNAME: nocoinc
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
         SLUG: helpdog
-        VERSION: 0.1.1 # TODO
         ASSETS_DIR: ".wordpress-org"
-
-    - name: test
-      run: |
-        ls -al
 
     # After the deploy, we also want to create a zip and upload it to the release on Github. We don't want
     # users to have to go to the repository to find our plugin :).

@@ -1,10 +1,10 @@
 === Helpdog Form - beautiful, secure and easy form ===
 Contributors:      nocoinc
-Tags:              block
+Tags:              forms, form builder, survey builder, custom forms, mobile forms, order forms, feedback forms, inquiry forms
 Requires at least: 6.5
 Tested up to:      6.6.1
 Requires PHP:      8.1
-Stable tag:        0.1.1
+Stable tag:        0.1.2
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,6 +50,9 @@ Yes, Helpdog is free to use. Please see the URL for more information.
 
 = 0.1.1 =
 * Add assets.
+
+= 0.1.2 =
+* Fix readme.txt.
 
 == Upgrade Notice ==
 

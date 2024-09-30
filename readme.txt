@@ -1,6 +1,6 @@
-=== Helpdog Form - beautiful, secure and easy form ===
+=== Helpdog Form - Beautiful, secure and easy forms ===
 Contributors:      nocoinc
-Tags:              forms, form builder, survey builder, custom forms, mobile forms, order forms, feedback forms, inquiry forms
+Tags:              forms, form builder, custom forms, mobile forms, inquiry forms
 Requires at least: 6.5
 Tested up to:      6.6.1
 Requires PHP:      8.1
@@ -38,7 +38,7 @@ Yes, Helpdog is free to use. Please see the URL for more information.
 
 == Screenshots ==
 
-1. Copy form embed URL from [Helpdog](https://helpdog.ai/).
+1. Copy form embed URL from Helpdog.
 2. Enter form embed URL to plugin block.
 3. The embedded form will be displayed.
 

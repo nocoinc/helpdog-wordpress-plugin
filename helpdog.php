@@ -6,7 +6,7 @@
  * Requires at least: 6.5
  * Tested up to:      6.6.1
  * Requires PHP:      8.1
- * Version:           0.1.3
+ * Version:           0.1.4
  * Author:            noco, Inc.
  * Author URI:        https://nocoinc.co.jp/
  * License:           GPL v2 or later

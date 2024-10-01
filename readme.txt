@@ -4,7 +4,7 @@ Tags:              forms, form builder, custom forms, mobile forms, inquiry form
 Requires at least: 6.5
 Tested up to:      6.6.1
 Requires PHP:      8.1
-Stable tag:        0.1.3
+Stable tag:        0.1.4
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ A plugin to embed forms created with Helpdog Form into WordPress.
 
 == Description ==
 
-HelpDog Form is a free tool that makes it easy to create highly functional forms.
+Helpdog Form is a free tool that makes it easy to create highly functional forms.
 You can design and publish a form in minutes for a variety of uses, including contact forms, seminar registration, store visit reservations, customer surveys, and more.
 It also offers a full range of features, including customizable templates, real-time data collection, and an entry form optimization (EFO) function that prevents abandonment during form entry.
 
@@ -55,6 +55,9 @@ Yes, Helpdog is free to use. Please see the URL for more information.
 * Fix readme.txt.
 
 = 0.1.3 =
+* Fix readme.txt.
+
+= 0.1.4 =
 * Fix readme.txt.
 
 == Upgrade Notice ==
